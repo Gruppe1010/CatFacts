@@ -43,6 +43,14 @@ public class CatFact implements Comparable<CatFact>
     {
         //TODO: parse to Int og sammenlign de to int-værdier
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        
+        // simpleDateFormat.format(createdAt) == dato i yyyyMMdd
+        // Integer.parseInt(simpleDateFormat.format(createdAt)) == Integer.parseInt(yyyyMMdd)
+        
+        // int dato1 = Integer.parseInt(simpleDateFormat.format(createdAt))
+        // int dato2 = Integer.parseInt(simpleDateFormat.format(catFact.createdAt))
+        
+        // return dato1.compareTo(dato2); // ELLER skal man lave if??? - det skal vi nok
     
         String date1 = simpleDateFormat.format(createdAt);
         String date2 = simpleDateFormat.format(catFact.createdAt);
