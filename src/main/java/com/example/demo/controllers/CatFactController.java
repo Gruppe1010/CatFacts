@@ -28,6 +28,8 @@ public class CatFactController
 
         return singleFact.fetchCatFact();
     }
+    
+ 
 
     @GetMapping("/getTen")
     @ResponseBody
@@ -43,9 +45,12 @@ public class CatFactController
 
         return catFactList;
     }
+    
+ 
 
     @GetMapping("/getTenSortByDate")
     @ResponseBody
+    
     public ArrayList<String> tenSortByDateCatFact() throws IOException
     {
         CatFactService tenFact = new CatFactService();
@@ -60,4 +65,17 @@ public class CatFactController
 
         return catFactList;
     }
+    
+    
+    /*
+    public int tenSortByDateCatFact() throws IOException
+    {
+        CatFactService tenFact = new CatFactService();
+        CatFact cat1 = tenFact.fetchCatFact();
+        CatFact cat2 = tenFact.fetchCatFact();
+    
+        return cat1.compareTo(cat2);
+    }
+    
+     */
 }
