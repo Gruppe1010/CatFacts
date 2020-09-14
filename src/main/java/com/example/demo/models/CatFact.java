@@ -47,17 +47,23 @@ public class CatFact implements Comparable<CatFact>
         // simpleDateFormat.format(createdAt) == dato i yyyyMMdd
         // Integer.parseInt(simpleDateFormat.format(createdAt)) == Integer.parseInt(yyyyMMdd)
         
-        // int dato1 = Integer.parseInt(simpleDateFormat.format(createdAt))
-        // int dato2 = Integer.parseInt(simpleDateFormat.format(catFact.createdAt))
+        int date1 = Integer.parseInt(simpleDateFormat.format(createdAt));
+        int date2 = Integer.parseInt(simpleDateFormat.format(catFact.createdAt));
         
-        // return dato1.compareTo(dato2); // ELLER skal man lave if??? - det skal vi nok
+        // return -1 = this.obj < param.obj
+        // return 1 = this.obj > param.obj
+        // return 0 = this.obj == param.obj
     
-        String date1 = simpleDateFormat.format(createdAt);
-        String date2 = simpleDateFormat.format(catFact.createdAt);
+        if(date1 > date2)
+        {
+            return 1;
+        }
+        else if(date1 < date2)
+        {
+            return -1;
+        }
         
-        return date1.compareTo(date2);
-        
-        // return createdAt.compareTo(catFact.createdAt);
+        return 0;
     }
     
     @Override
