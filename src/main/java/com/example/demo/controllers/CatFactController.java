@@ -19,12 +19,12 @@ public class CatFactController
     @ResponseBody
     public String WelcomeCatFact()
     {
-        return "Halli Hallo and welcome to Cat Facts!       " +
-                "You can use these URL's to access subsites:       " +
-                "localhost:8080/getSingle       " +
-                "localhost:8080/getTen        " +
-                "localhost:8080/getTenSortByDate        " +
-                "localhost:8080/contains?c=CharacterToSearchFor&amount=AmountOfCharacter";
+        return "Halli Hallo and welcome to Cat Facts!\nHEJ" +
+                       "You can use these URL's to access subsites:\n" +
+                       "\tlocalhost:8080/getSingle\n" +
+                       "\tlocalhost:8080/getTen\n" +
+                       "\tlocalhost:8080/getTenSortByDate\n" +
+                       "\tlocalhost:8080/contains?c=CharacterToSearchFor&amount=AmountOfCharacter";
     }
 
     // localhost:8080/getSingle
