@@ -20,12 +20,12 @@ public class CatFactController
     public String WelcomeCatFact()
     {
         System.out.println("test");
-        return "<h1>Halli Hallo and welcome to Cat Facts!\nHEJ" +
-                       "You can use these URL's to access subsites:\n" +
-                       "\tlocalhost:8080/getSingle\n" +
-                       "\tlocalhost:8080/getTen\n" +
-                       "\tlocalhost:8080/getTenSortByDate\n" +
-                       "\tlocalhost:8080/contains?c=CharacterToSearchFor&amount=AmountOfCharacter</h1>";
+        return "<h1>Halli Hallo and welcome to Cat Facts!" +
+                       "<br><h3>You can use these URL's to access subsites:</h3></br>" +
+                       "<br>localhost:8080/getSingle</br>" +
+                       "<br>localhost:8080/getTen</br>" +
+                       "<br>localhost:8080/getTenSortByDate</br>" +
+                       "<br>localhost:8080/contains?c=CharacterToSearchFor&amount=AmountOfCharacter</br>";
     }
 
     // localhost:8080/getSingle
