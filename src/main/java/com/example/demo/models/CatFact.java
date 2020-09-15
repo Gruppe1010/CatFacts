@@ -69,6 +69,6 @@ public class CatFact implements Comparable<CatFact>
     @Override
     public String toString()
     {
-        return "Cat Fact: " + text + "      Created: " + createdAt + "      Updated: " + updatedAt + "          ";
+        return "<br><b>Cat Fact: </b>" + text + "</br>" + "<br><b>Created: </b>" + createdAt + "</br>" + "<br><b>Updated: </b>" + updatedAt + "</br><br></br>";
     }
 }

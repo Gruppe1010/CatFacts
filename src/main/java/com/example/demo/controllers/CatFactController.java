@@ -20,7 +20,17 @@ public class CatFactController
     {
        return "index";
     }
-
+    
+    public String arrayListToString(ArrayList<CatFact> catFactList)
+    {
+        String arrayListString = "";
+        for(CatFact cf : catFactList)
+        {
+            arrayListString += cf.toString();
+        }
+        return arrayListString;
+    }
+    
     // localhost:8080/getSingle
     @GetMapping("/getSingle")
     @ResponseBody
@@ -34,7 +44,7 @@ public class CatFactController
     // localhost:8080/getTen
     @GetMapping("/getTen")
     @ResponseBody
-    public ArrayList<CatFact> tenCatFact() throws  IOException
+    public String tenCatFact() throws  IOException
     {
         CatFactService tenFact = new CatFactService();
         ArrayList<CatFact> catFactList = new ArrayList<>();
@@ -44,13 +54,13 @@ public class CatFactController
             catFactList.add(tenFact.fetchCatFact());
         }
 
-        return catFactList;
+        return arrayListToString(catFactList);
     }
     
     // localhost:8080/getTenSortByDate
     @GetMapping("/getTenSortByDate")
     @ResponseBody
-    public ArrayList<CatFact> tenSortByDateCatFact() throws IOException
+    public String tenSortByDateCatFact() throws IOException
     {
         CatFactService tenFact = new CatFactService();
         ArrayList<CatFact> catFactList = new ArrayList<>();
@@ -62,7 +72,7 @@ public class CatFactController
 
         Collections.sort(catFactList);
 
-        return catFactList;
+        return arrayListToString(catFactList);
     }
 
     // localhost:8080/contains?c=CHAR&amount=ANTAL
